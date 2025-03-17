@@ -1,10 +1,12 @@
 #!/usr/bin/env node
-const { getUser } = require('./Services/githubService');
+const { getEvents } = require('./Services/githubService');
 
 async function main() {
   try {
-    const result = await getUser('rntdc');
-    console.log("Hello, CLI World!");
+    const username = process.argv[2];
+
+    const result = await getEvents(username);
+
     console.log(result);
   } catch (error) {
     console.error("Erro ao buscar usuário:", error.message);
