@@ -1,5 +1,5 @@
 {
-  "name": "github-user-activity",
+  "name": "cli-github-user-activity",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
