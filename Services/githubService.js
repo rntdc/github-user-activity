@@ -4,7 +4,7 @@ async function fetchJson(url) {
     const response = await fetch(url);
 
     if (!response.ok) {
-        throw new Error(`Erro na requisição: ${response.status} - ${response.statusText}`);
+        throw new Error(`HTTP Code ${response.status} - ${response.statusText}`);
     }
 
     return response.json();

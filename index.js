@@ -7,9 +7,11 @@ async function main() {
 
     const result = await getEvents(username);
 
-    console.log(result);
+    result.forEach(element => {
+      console.log(`- ${element.type} at ${element.repo.name} in ${element.created_at}` )
+    });
   } catch (error) {
-    console.error("Erro ao buscar usuário:", error.message);
+    console.error("An error ocurred while fetching user events:", error.message);
   }
 }
 
